@@ -1,0 +1,630 @@
+{
+  "users": [
+    {
+      "id": "u-demo-student-001",
+      "name": "Alex Rivera",
+      "email": "alex.rivera@university.edu",
+      "password_hash": "$2a$10$demoHashForTestingPurposeOnlyPassword123",
+      "education_level": "College / University",
+      "course_branch": "Computer Science & Engineering",
+      "year_semester": "3rd Year / 6th Semester",
+      "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "xp": 710,
+      "level": 3,
+      "current_streak": 7,
+      "last_active_date": "2026-09-13"
+    }
+  ],
+  "userSettings": [
+    {
+      "theme": "dark",
+      "daily_study_target_minutes": 90,
+      "learning_goals": [
+        "Pass Semester Finals with A+",
+        "Master DSA for Technical Interviews",
+        "Maintain 7+ Day Streak"
+      ],
+      "selected_subjects": [
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "Database Management Systems",
+        "Computer Networks"
+      ],
+      "ai_model_preference": "gemini-1.5-pro",
+      "notifications_enabled": true,
+      "sound_effects_enabled": true,
+      "user_id": "u-demo-student-001"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "s-dsa",
+      "name": "Data Structures & Algorithms",
+      "code": "CS301",
+      "color": "#6366f1",
+      "icon": "code",
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "s-os",
+      "name": "Operating Systems",
+      "code": "CS302",
+      "color": "#ec4899",
+      "icon": "cpu",
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "s-dbms",
+      "name": "Database Management Systems",
+      "code": "CS303",
+      "color": "#10b981",
+      "icon": "database",
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "s-cn",
+      "name": "Computer Networks",
+      "code": "CS304",
+      "color": "#f59e0b",
+      "icon": "network",
+      "user_id": "u-demo-student-001"
+    }
+  ],
+  "topics": [
+    {
+      "id": "t-1",
+      "subject_id": "s-dsa",
+      "name": "Binary Search Trees",
+      "mastery_percentage": 42,
+      "is_weak_topic": true
+    },
+    {
+      "id": "t-2",
+      "subject_id": "s-dsa",
+      "name": "Dynamic Programming",
+      "mastery_percentage": 58,
+      "is_weak_topic": true
+    },
+    {
+      "id": "t-3",
+      "subject_id": "s-dsa",
+      "name": "Graph Traversals (BFS/DFS)",
+      "mastery_percentage": 86,
+      "is_weak_topic": false
+    },
+    {
+      "id": "t-4",
+      "subject_id": "s-os",
+      "name": "Deadlock Prevention & Detection",
+      "mastery_percentage": 48,
+      "is_weak_topic": true
+    },
+    {
+      "id": "t-5",
+      "subject_id": "s-os",
+      "name": "Virtual Memory & Paging",
+      "mastery_percentage": 75,
+      "is_weak_topic": false
+    },
+    {
+      "id": "t-6",
+      "subject_id": "s-dbms",
+      "name": "B+ Trees Indexing & Normalization",
+      "mastery_percentage": 52,
+      "is_weak_topic": true
+    },
+    {
+      "id": "t-7",
+      "subject_id": "s-dbms",
+      "name": "ACID Properties & Transactions",
+      "mastery_percentage": 88,
+      "is_weak_topic": false
+    },
+    {
+      "id": "t-8",
+      "subject_id": "s-cn",
+      "name": "TCP 3-Way Handshake & Congestion",
+      "mastery_percentage": 82,
+      "is_weak_topic": false
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-os-deadlocks",
+      "title": "Operating Systems: Concurrency & Deadlocks",
+      "file_name": "OS_Module_4_Deadlocks.pdf",
+      "file_type": "application/pdf",
+      "file_size": 2450000,
+      "file_path": "uploads/OS_Module_4_Deadlocks.pdf",
+      "extracted_text": "MODULE 4: DEADLOCKS AND CONCURRENCY IN MODERN OS\nSection 1: The Deadlock Problem\nA deadlock occurs when a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process.\nSystem Model: Resources R1, R2, ..., Rm (CPU cycles, memory space, I/O devices). Each process utilizes a resource through: Request, Use, Release.\n\nSection 2: The Four Necessary Coffman Conditions\nFor a deadlock to occur, four conditions must hold simultaneously:\n1. Mutual Exclusion: At least one resource must be held in a non-shareable mode.\n2. Hold and Wait: A process must be currently holding at least one resource and requesting additional resources that are currently being held by other processes.\n3. No Preemption: Resources cannot be preempted; a resource can only be released voluntarily by the process holding it after completing its task.\n4. Circular Wait: A set {P0, P1, ..., Pn} of waiting processes must exist such that P0 is waiting for a resource held by P1, P1 is waiting for P2, and Pn is waiting for P0.\n\nSection 3: Deadlock Handling Strategies\n- Deadlock Prevention: Invalidate at least one of the four Coffman conditions. To break Hold and Wait, require a process to request all resources at once. To break Circular Wait, impose a total ordering of all resource types.\n- Deadlock Avoidance: Banker's Algorithm (Edsger Dijkstra). Maintain safe state. Requires advance knowledge of maximum resource demands.\n- Deadlock Detection and Recovery: Allow deadlock to occur, run detection algorithm (Resource Allocation Graph / wait-for graph cycle check), then recover via process termination or resource preemption.\n- Ignore (Ostrich Algorithm): Pretend deadlocks never occur; used in modern general-purpose OS when deadlocks are sufficiently rare.",
+      "chunk_count": 3,
+      "summary": "Comprehensive guide covering Coffman conditions for deadlocks, prevention strategies, Banker's avoidance algorithm, and detection methods.",
+      "created_at": "2026-09-10T12:51:59.717Z",
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "doc-dsa-trees",
+      "title": "Data Structures: Advanced Trees & Balancing",
+      "file_name": "Advanced_Trees_AVL_BST.docx",
+      "file_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "file_size": 1820000,
+      "file_path": "uploads/Advanced_Trees_AVL_BST.docx",
+      "extracted_text": "ADVANCED DATA STRUCTURES: BINARY SEARCH TREES AND BALANCED TREES\n1. Binary Search Tree (BST) Invariant:\nFor every node N:\n- Keys in left subtree < Key of N\n- Keys in right subtree > Key of N\nAverage Time Complexity: Search O(log N), Insert O(log N), Delete O(log N). Worst case O(N) when degenerate (skewed).\n\n2. BST Node Deletion Cases:\nCase 1: Node to be deleted is a leaf (zero children) -> Simply remove the node.\nCase 2: Node has one child -> Splice out the node and link its parent directly to its child.\nCase 3: Node has two children -> Find in-order successor (minimum value in right subtree) or in-order predecessor (maximum in left subtree), copy successor value to current node, then delete successor from right subtree.\n\n3. AVL Trees (Adelson-Velsky and Landis):\nA self-balancing BST where the height difference between left and right subtrees (Balance Factor = Height(Left) - Height(Right)) is at most -1, 0, or +1.\nRotations:\n- LL Rotation: Single right rotation.\n- RR Rotation: Single left rotation.\n- LR Rotation: Left rotation on left child followed by Right rotation on root.\n- RL Rotation: Right rotation on right child followed by Left rotation on root.",
+      "chunk_count": 2,
+      "summary": "Covers BST properties, detailed 3-case node deletion mechanics, AVL tree balance factor formulas, and the 4 tree rotations.",
+      "created_at": "2026-09-08T12:51:59.717Z",
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "doc-dbms-norm",
+      "title": "DBMS: Normalization & Functional Dependencies",
+      "file_name": "DBMS_Lecture_Normalization.pdf",
+      "file_type": "application/pdf",
+      "file_size": 3100000,
+      "file_path": "uploads/DBMS_Lecture_Normalization.pdf",
+      "extracted_text": "RELATIONAL DATABASE DESIGN: FUNCTIONAL DEPENDENCIES AND NORMAL FORMS\n1. Database Anomalies:\n- Insertion Anomaly: Inability to record certain facts without adding unnecessary records.\n- Deletion Anomaly: Unintended loss of data when deleting unrelated records.\n- Update Anomaly: Data inconsistency when redundant data is updated in only some rows.\n\n2. Normal Forms:\n- First Normal Form (1NF): All attributes must contain atomic values only (no repeating groups or multi-valued attributes).\n- Second Normal Form (2NF): Must be in 1NF AND have no partial dependency (every non-prime attribute must be fully functionally dependent on the entire candidate key).\n- Third Normal Form (3NF): Must be in 2NF AND have no transitive dependencies (for every FD X -> Y, X is a superkey OR Y is a prime attribute).\n- Boyce-Codd Normal Form (BCNF): For every non-trivial functional dependency X -> Y, X must strictly be a superkey.",
+      "chunk_count": 2,
+      "summary": "Decomposition rules, anomalies overview, and progressive definitions from 1NF, 2NF, 3NF through BCNF.",
+      "created_at": "2026-09-11T12:51:59.717Z",
+      "user_id": "u-demo-student-001"
+    }
+  ],
+  "notes": [
+    {
+      "id": "note-1789310844867",
+      "created_at": "2026-09-13T14:47:24.867Z",
+      "is_bookmarked": false,
+      "user_id": "u-demo-student-001",
+      "document_id": null,
+      "subject_name": "Operating Systems",
+      "title": "Operating Systems — Exam Notes",
+      "format_type": "Exam Notes",
+      "content_markdown": "# Operating Systems — Exam Notes\n\n> **Subject**: Operating Systems | **Format**: Exam Notes | **Generated**: 9/13/2026\n\n## 🎯 High-Yield Exam Summary\n\n### 1. Definitive Concepts\n- A deadlock occurs when processes hold resources and wait for each other\n- 4 Coffman conditions: Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait\n\n### 2. Common Pitfalls & Mistakes\n- Confusing necessary conditions with sufficient conditions.\n- Overlooking worst-case edge cases in unbalanced structures.\n\n### 3. High-Scoring Exam Tips 💡\n- Always draw the state diagram or recurrence tree first.\n- Explicitly state time and space complexity with Big-O notation.\n",
+      "key_takeaways": [
+        "A deadlock occurs when processes hold resources and wait for each other",
+        "4 Coffman conditions: Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait"
+      ],
+      "tags": [
+        "Operating Systems",
+        "Exam Notes",
+        "AI Generated"
+      ]
+    },
+    {
+      "id": "note-os-deadlocks-exam",
+      "user_id": "u-demo-student-001",
+      "document_id": "doc-os-deadlocks",
+      "subject_name": "Operating Systems",
+      "title": "Deadlocks & Coffman Conditions: Ultimate Exam Revision",
+      "format_type": "Exam Notes",
+      "content_markdown": "# Deadlocks & Concurrency: High-Yield Exam Notes\n\n## 1. Core Definition\nA **deadlock** is a state in which two or more competing processes are waiting for each other to finish or release resources, causing all involved processes to halt indefinitely.\n\n> **Key Rule**: Deadlock involves mutually dependent waiting on non-preemptible resources.\n\n---\n\n## 2. The 4 Necessary Coffman Conditions\nAll four must hold simultaneously for a deadlock to exist:\n\n1. **Mutual Exclusion**: At least one resource must be held in a non-shareable mode (e.g., printer, write-lock).\n2. **Hold and Wait**: A process holds at least one resource while waiting to acquire additional ones held by others.\n3. **No Preemption**: A resource cannot be forcibly taken; it must be voluntarily yielded by the holding process.\n4. **Circular Wait**: A closed chain of processes exists: $P_0 \\rightarrow P_1 \\rightarrow P_2 \\dots \\rightarrow P_n \\rightarrow P_0$.\n\n---\n\n## 3. High-Scoring Comparison: Prevention vs Avoidance vs Detection\n\n| Strategy | Mechanism | Overhead | Trade-off |\n| :--- | :--- | :--- | :--- |\n| **Prevention** | Invalidate $\\ge 1$ Coffman condition (e.g. total resource ordering) | Low runtime | Poor resource utilization |\n| **Avoidance** | Banker's Algorithm checks safe state before allocating | Medium-High | Needs declared max needs |\n| **Detection** | Periodically scan wait-for graphs for cycles; abort/preempt | High recovery | Late detection, potential starvation |\n\n---\n\n## 4. Banker's Algorithm Formula\nSafety test uses three primary vectors/matrices:\n* $\\text{Need}[i, j] = \\text{Max}[i, j] - \\text{Allocation}[i, j]$\n* A state is **Safe** if there exists an execution sequence $\\langle P_1, P_2, \\dots, P_n \\rangle$ such that for each $P_i$:\n  $$\\text{Need}_i \\le \\text{Available}$$\n\n💡 **Exam Tip**: In numerical questions, always construct the **Need Matrix** first before checking step-by-step process satisfaction!",
+      "key_takeaways": [
+        "Four Coffman conditions are required simultaneously",
+        "Need Matrix = Max - Allocation",
+        "Breaking circular wait requires imposing resource hierarchy ordering",
+        "Banker's Algorithm requires maximum resource declaration ahead of time"
+      ],
+      "tags": [
+        "OS",
+        "Deadlocks",
+        "Bankers Algorithm",
+        "Exam Prep"
+      ],
+      "is_bookmarked": true,
+      "created_at": "2026-09-11T12:51:59.718Z"
+    },
+    {
+      "id": "note-dsa-bst",
+      "user_id": "u-demo-student-001",
+      "document_id": "doc-dsa-trees",
+      "subject_name": "Data Structures & Algorithms",
+      "title": "BST Operations & Deletion Mastery",
+      "format_type": "Detailed Notes",
+      "content_markdown": "# Binary Search Trees (BST) & Deletion Algorithm\n\n## Overview\nA Binary Search Tree is a hierarchical node structure maintaining the order invariant:\n`Left Subtree Keys < Node Key < Right Subtree Keys`\n\n## Deletion Algorithm: The 3 Cases\nDeleting a node with key $K$ requires recursively locating the node, then handling one of three structure states:\n\n```typescript\nfunction deleteNode(root: TreeNode | null, key: number): TreeNode | null {\n  if (!root) return null;\n  if (key < root.val) root.left = deleteNode(root.left, key);\n  else if (key > root.val) root.right = deleteNode(root.right, key);\n  else {\n    // Case 1 & 2: 0 or 1 child\n    if (!root.left) return root.right;\n    if (!root.right) return root.left;\n    \n    // Case 3: 2 children - Replace with In-order Successor (min in right subtree)\n    let successor = findMin(root.right);\n    root.val = successor.val;\n    root.right = deleteNode(root.right, successor.val);\n  }\n  return root;\n}\n```\n\n### Time Complexity\n- **Average**: $O(\\log N)$ for balanced trees\n- **Worst Case**: $O(N)$ for skewed trees (degrades to linked list)\n- **Space Complexity**: $O(H)$ recursion stack where $H$ is height",
+      "key_takeaways": [
+        "Case 3 requires replacing with In-order Successor (min of right subtree)",
+        "Worst-case BST complexity is O(N) without balancing",
+        "AVL trees prevent skew with 4 rotational adjustments (LL, RR, LR, RL)"
+      ],
+      "tags": [
+        "Trees",
+        "BST",
+        "Algorithms",
+        "Interview Prep"
+      ],
+      "is_bookmarked": false,
+      "created_at": "2026-09-09T12:51:59.718Z"
+    }
+  ],
+  "flashcardDecks": [
+    {
+      "id": "deck-os",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Operating Systems",
+      "title": "Deadlocks & Process Synchronization",
+      "description": "Core definitions, Coffman conditions, Banker's algorithm, and race conditions.",
+      "card_count": 5,
+      "created_at": "2026-09-10T12:51:59.718Z"
+    },
+    {
+      "id": "deck-dbms",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Database Management Systems",
+      "title": "Normalization & Functional Dependencies",
+      "description": "1NF, 2NF, 3NF, BCNF rules, Armstrong axioms, and anomaly definitions.",
+      "card_count": 4,
+      "created_at": "2026-09-11T12:51:59.718Z"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "c-1",
+      "deck_id": "deck-os",
+      "front_text": "What are the four necessary Coffman conditions for a deadlock?",
+      "back_text": "1. Mutual Exclusion\n2. Hold and Wait\n3. No Preemption\n4. Circular Wait\nAll 4 must be present simultaneously.",
+      "topic": "Deadlock",
+      "interval_days": 3,
+      "repetition_count": 2,
+      "easiness_factor": 2.3,
+      "next_review_date": "2026-09-16T14:47:24.872Z",
+      "state": "review",
+      "is_bookmarked": true
+    },
+    {
+      "id": "c-2",
+      "deck_id": "deck-os",
+      "front_text": "How does the OS eliminate the 'Circular Wait' condition in deadlock prevention?",
+      "back_text": "By imposing a total global ordering of all resource types and requiring that each process requests resources only in strictly increasing numerical order.",
+      "topic": "Deadlock Prevention",
+      "interval_days": 1,
+      "repetition_count": 0,
+      "easiness_factor": 2.1,
+      "next_review_date": "2026-09-13T12:51:59.718Z",
+      "state": "new",
+      "is_bookmarked": false
+    },
+    {
+      "id": "c-3",
+      "deck_id": "deck-os",
+      "front_text": "What is the formula for calculating the Need Matrix in the Banker's Algorithm?",
+      "back_text": "Need[i][j] = Max[i][j] - Allocation[i][j]\nRepresents remaining resources process i might request of type j.",
+      "topic": "Banker's Algorithm",
+      "interval_days": 3,
+      "repetition_count": 2,
+      "easiness_factor": 2.5,
+      "next_review_date": "2026-09-15T12:51:59.718Z",
+      "state": "review",
+      "is_bookmarked": true
+    },
+    {
+      "id": "c-4",
+      "deck_id": "deck-os",
+      "front_text": "What is the difference between a Safe State and an Unsafe State?",
+      "back_text": "A state is safe if a safe sequence exists where all processes can finish without deadlock. An unsafe state is NOT necessarily deadlocked, but may lead to deadlock if max demands are requested.",
+      "topic": "Banker's Algorithm",
+      "interval_days": 2,
+      "repetition_count": 1,
+      "easiness_factor": 2.4,
+      "next_review_date": "2026-09-13T12:51:59.718Z",
+      "state": "learning",
+      "is_bookmarked": false
+    },
+    {
+      "id": "c-5",
+      "deck_id": "deck-os",
+      "front_text": "What is the Ostrich Algorithm in operating systems?",
+      "back_text": "An approach where the OS ignores deadlock occurrences because the cost of detection/prevention outweighs the rarity of the event (used in Linux/Windows for general processes).",
+      "topic": "Deadlock Strategies",
+      "interval_days": 4,
+      "repetition_count": 3,
+      "easiness_factor": 2.6,
+      "next_review_date": "2026-09-16T12:51:59.718Z",
+      "state": "review",
+      "is_bookmarked": false
+    },
+    {
+      "id": "c-6",
+      "deck_id": "deck-dbms",
+      "front_text": "What requirement distinguishes 2NF from 1NF?",
+      "back_text": "2NF requires 1NF PLUS no partial functional dependencies: all non-prime attributes must depend on the WHOLE candidate key, not just a subset.",
+      "topic": "Normalization",
+      "interval_days": 1,
+      "repetition_count": 1,
+      "easiness_factor": 2.2,
+      "next_review_date": "2026-09-13T12:51:59.718Z",
+      "state": "learning",
+      "is_bookmarked": true
+    },
+    {
+      "id": "c-7",
+      "deck_id": "deck-dbms",
+      "front_text": "What is the strict condition for Boyce-Codd Normal Form (BCNF)?",
+      "back_text": "For every non-trivial functional dependency X -> Y, X MUST be a Superkey.",
+      "topic": "BCNF",
+      "interval_days": 1,
+      "repetition_count": 0,
+      "easiness_factor": 2,
+      "next_review_date": "2026-09-13T12:51:59.718Z",
+      "state": "new",
+      "is_bookmarked": false
+    },
+    {
+      "id": "c-8",
+      "deck_id": "deck-dbms",
+      "front_text": "What is a Transitive Dependency in DBMS?",
+      "back_text": "When a non-prime attribute depends on another non-prime attribute (X -> Y and Y -> Z where Z is not part of candidate key). 3NF eliminates this.",
+      "topic": "3NF",
+      "interval_days": 2,
+      "repetition_count": 2,
+      "easiness_factor": 2.5,
+      "next_review_date": "2026-09-14T12:51:59.718Z",
+      "state": "review",
+      "is_bookmarked": false
+    },
+    {
+      "id": "c-9",
+      "deck_id": "deck-dbms",
+      "front_text": "Explain the ACID properties of database transactions.",
+      "back_text": "Atomicity (all or nothing)\nConsistency (database remains valid)\nIsolation (concurrent transactions don't interfere)\nDurability (committed data survives crashes).",
+      "topic": "Transactions",
+      "interval_days": 6,
+      "repetition_count": 4,
+      "easiness_factor": 2.7,
+      "next_review_date": "2026-09-18T12:51:59.718Z",
+      "state": "review",
+      "is_bookmarked": false
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "quiz-os-deadlocks",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Operating Systems",
+      "topic": "Deadlocks & Resource Allocation",
+      "title": "OS Concurrency & Deadlock Diagnostics",
+      "difficulty": "medium",
+      "is_adaptive": false,
+      "time_limit_minutes": 10,
+      "created_at": "2026-09-12T12:51:59.718Z"
+    }
+  ],
+  "quizQuestions": [
+    {
+      "id": "q-1",
+      "question_text": "Which of the following conditions is NOT one of the four Coffman conditions for deadlock?",
+      "question_type": "mcq",
+      "options": [
+        "Mutual Exclusion",
+        "Circular Wait",
+        "Preemption of Resources",
+        "Hold and Wait"
+      ],
+      "correct_answer": "Preemption of Resources",
+      "explanation": "The condition is NO preemption. If resources can be preempted forcibly, deadlock cannot occur.",
+      "topic": "Coffman Conditions",
+      "quiz_id": "quiz-os-deadlocks"
+    },
+    {
+      "id": "q-2",
+      "question_text": "In Banker's Algorithm, how is the Need matrix calculated for process Pi?",
+      "question_type": "mcq",
+      "options": [
+        "Need = Max - Allocation",
+        "Need = Allocation - Available",
+        "Need = Max + Available",
+        "Need = Total - Max"
+      ],
+      "correct_answer": "Need = Max - Allocation",
+      "explanation": "Need represents the remaining resources the process may request before releasing its allocation: Need = Max - Allocation.",
+      "topic": "Banker's Algorithm",
+      "quiz_id": "quiz-os-deadlocks"
+    },
+    {
+      "id": "q-3",
+      "question_text": "True or False: If a system is in an unsafe state, it is guaranteed to be deadlocked.",
+      "question_type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_answer": "False",
+      "explanation": "An unsafe state is NOT deadlocked; it is simply a state from which the OS cannot guarantee avoiding a deadlock if processes request their declared maximum resources.",
+      "topic": "Deadlock Avoidance",
+      "quiz_id": "quiz-os-deadlocks"
+    },
+    {
+      "id": "q-4",
+      "question_text": "How does an operating system prevent the Circular Wait condition?",
+      "question_type": "mcq",
+      "options": [
+        "By allocating all resources at once at process startup",
+        "By establishing a global total ordering on resources and requiring requests in strictly increasing order",
+        "By killing the lowest priority process every 5 minutes",
+        "By disabling virtual memory paging"
+      ],
+      "correct_answer": "By establishing a global total ordering on resources and requiring requests in strictly increasing order",
+      "explanation": "Assigning a linear index F: R -> N and requiring requests in strictly ascending order mathematically proves cycles cannot form in the resource allocation graph.",
+      "topic": "Deadlock Prevention",
+      "quiz_id": "quiz-os-deadlocks"
+    },
+    {
+      "id": "q-5",
+      "question_text": "What algorithm is commonly used for Deadlock Detection in single-instance resource systems?",
+      "question_type": "mcq",
+      "options": [
+        "Wait-For Graph Cycle Detection",
+        "Dijkstra's Shortest Path",
+        "LRU Page Replacement",
+        "Kruskal's MST"
+      ],
+      "correct_answer": "Wait-For Graph Cycle Detection",
+      "explanation": "In single-instance resource systems, a cycle in the Wait-For Graph is both a necessary and sufficient condition for deadlock.",
+      "topic": "Deadlock Detection",
+      "quiz_id": "quiz-os-deadlocks"
+    }
+  ],
+  "quizAttempts": [],
+  "studyPlans": [],
+  "studyTasks": [
+    {
+      "id": "task-1",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Operating Systems",
+      "title": "Revise Deadlock Coffman Conditions & Banker's Algorithm",
+      "duration_minutes": 30,
+      "scheduled_date": "2026-09-13",
+      "is_completed": false,
+      "priority": "high",
+      "category": "revise"
+    },
+    {
+      "id": "task-2",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Data Structures & Algorithms",
+      "title": "Review BST 3-Case Deletion & Solve 2 Practice Problems",
+      "duration_minutes": 45,
+      "scheduled_date": "2026-09-13",
+      "is_completed": false,
+      "priority": "high",
+      "category": "practice"
+    },
+    {
+      "id": "task-3",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Database Management Systems",
+      "title": "Complete 1NF to BCNF Normalization Flashcards (4 cards due)",
+      "duration_minutes": 20,
+      "scheduled_date": "2026-09-13",
+      "is_completed": true,
+      "priority": "medium",
+      "category": "flashcards"
+    },
+    {
+      "id": "task-4",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Computer Networks",
+      "title": "Review TCP 3-Way Handshake & Congestion Control Curves",
+      "duration_minutes": 25,
+      "scheduled_date": "2026-09-13",
+      "is_completed": false,
+      "priority": "medium",
+      "category": "revise"
+    }
+  ],
+  "studySessions": [
+    {
+      "id": "sess-1789310844878",
+      "created_at": "2026-09-13T14:47:24.878Z",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Data Structures",
+      "task_name": "BST Practice",
+      "duration_minutes": 25,
+      "mode": "pomodoro",
+      "xp_awarded": 30
+    },
+    {
+      "id": "sess-1",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Operating Systems",
+      "task_name": "Concurrency and Deadlocks deep dive",
+      "duration_minutes": 50,
+      "mode": "pomodoro",
+      "xp_awarded": 50,
+      "created_at": "2026-09-12T12:51:59.718Z"
+    },
+    {
+      "id": "sess-2",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Database Management Systems",
+      "task_name": "Normalization decomposition exercises",
+      "duration_minutes": 25,
+      "mode": "pomodoro",
+      "xp_awarded": 25,
+      "created_at": "2026-09-11T12:51:59.718Z"
+    },
+    {
+      "id": "sess-3",
+      "user_id": "u-demo-student-001",
+      "subject_name": "Data Structures & Algorithms",
+      "task_name": "Binary Tree Traversal coding session",
+      "duration_minutes": 45,
+      "mode": "deep_work",
+      "xp_awarded": 45,
+      "created_at": "2026-09-10T12:51:59.718Z"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ach-1",
+      "title": "7-Day Streak",
+      "description": "Studied 7 days in a row without breaking focus.",
+      "icon": "flame",
+      "unlocked": true,
+      "unlocked_at": "2026-09-13T12:51:59.718Z",
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "ach-2",
+      "title": "100 Flashcards",
+      "description": "Mastered and reviewed 100 flashcard prompts.",
+      "icon": "layers",
+      "unlocked": true,
+      "unlocked_at": "2026-09-11T12:51:59.718Z",
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "ach-3",
+      "title": "Quiz Master",
+      "description": "Scored 100% on any AI generated quiz.",
+      "icon": "award",
+      "unlocked": true,
+      "unlocked_at": "2026-09-09T12:51:59.718Z",
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "ach-4",
+      "title": "Goal Crusher",
+      "description": "Completed all scheduled study tasks in a single day.",
+      "icon": "check-circle",
+      "unlocked": false,
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "ach-5",
+      "title": "30-Day Streak",
+      "description": "Studied for 30 consecutive calendar days.",
+      "icon": "zap",
+      "unlocked": false,
+      "user_id": "u-demo-student-001"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "title": "Flashcards Due For Revision",
+      "message": "You have 6 flashcards scheduled for spaced repetition review today in OS and DBMS.",
+      "type": "review",
+      "read": false,
+      "time": "10m ago",
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "notif-2",
+      "title": "Weak Topic Alert: Deadlocks",
+      "message": "Your recent quiz accuracy on Deadlocks was 42%. We recommend a 20-minute targeted revision session.",
+      "type": "warning",
+      "read": false,
+      "time": "2h ago",
+      "user_id": "u-demo-student-001"
+    },
+    {
+      "id": "notif-3",
+      "title": "Streak Saved! 🔥",
+      "message": "7-day study streak milestone unlocked! You earned +50 XP bonus.",
+      "type": "reward",
+      "read": true,
+      "time": "Yesterday",
+      "user_id": "u-demo-student-001"
+    }
+  ]
+}
